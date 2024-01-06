@@ -17,3 +17,10 @@ function setRotation(element, rotationRatio) {
   element.style.setProperty('--rotation', rotationRatio * 360)
 }
 setClock()
+
+const clock = document.getElementById('clock')
+setInterval( function (){
+  let date = new Date()
+  // console.log(date.toLocaleTimeString())
+  clock.innerHTML= date.toLocaleTimeString();
+},1000)
